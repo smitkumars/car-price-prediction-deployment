@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</head>
+<body align="center">
+    <h1>Car Price Prediction</h1>
+
+    <form action="{% url 'result' %}">
+    {% csrf_token %}
+        Present_Price: <input type="text" required name="Present_Price"><br> <br>
+
+        Kms Driven: <input type="text" required name="Kms_Driven"><br> <br>
+
+        Owner: <input type="text" required name="Owner"><br> <br>
+
+        Years: <input type="text" required name="years"><br> <br>
+
+        Fuel Type Diesel: <input type="text" required name="Fuel_Type_Diesel"><br> <br>
+
+        Fuel Type Petrol: <input type="text" required name="Fuel_Type_Petrol"><br> <br>
+
+        Seller Type Indivisual: <input type="text" required name="Seller_Type_Individual"><br> <br>
+
+        Transmission Manual: <input type="text" required name="Transmission_Manual"><br> <br>
+
+        <p>Please select your Fuel_Type:</p>
+      <input type="radio" name="r1" id="d" value="petrol">
+      <label for="p">Petrol</label>
+      <input type="radio" name="r1" id="d" value="diesel">
+      <label for="d">Diesel</label>
+      <input type="radio" name="r1" id="c" value="CNG">
+      <label for="c">CNG</label> <br>
+       <br> <br>
+       <p>Please select your Owner Type:</p>
+      <input type="radio" id="o1" name="s1" value="Dealer">
+      <label for="o1">Dealer</label>
+      <input type="radio" id="o2" name="s1" value="Individual">
+      <label for="o2">Individual</label>
+       <br><br>
+       <p>Please select your Transmission Type:</p>
+       <input type="radio" id="r2" name="t1" value="Manual">
+       <label for="r2">Manual</label>
+       <input type="radio" id="r3" name="t1" value="Automatic">
+       <label for="r3">Automatic</label>
+        <br><br>
+        <br><br>
+        <label for="owner">Choose a car:</label>
+        <select name="owner" id="owner">
+          <option value="0">First owner</option>
+          <option value="1">Second Owner</option>
+          <option value="3">Third Owner</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
