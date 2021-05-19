@@ -24,6 +24,6 @@ def result(request):
 
 
         new_lst[2] = str(2021 - int(new_lst[2]))
-        print(new_lst)
+        
         sell_price= rf_reg.predict([new_lst])
         return render(request,'car_app/result.html',{'sell_price':sell_price})
