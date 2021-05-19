@@ -16,13 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from carpred_app import views
-from django.conf.urls.static import serve
-from django.conf.urls import url
+
 
 urlpatterns = [
     path('',views.index,name='index'),
     path('result/',include('carpred_app.urls')),
     path('admin/', admin.site.urls),
 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+
 ]
