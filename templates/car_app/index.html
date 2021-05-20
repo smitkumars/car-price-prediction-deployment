@@ -47,7 +47,6 @@
 <div  class="container"
     style="padding-left: 300px; border: 1px solid; background-color:#76cee8; padding-top:30px; padding-bottom: 50px;" >
 
-
     <form action="{% url 'carpred_app:result' %}">
       {% csrf_token %}
       <div class="container text-center" style="padding-right: 300px">
@@ -116,7 +115,7 @@
 
 
 
-<div class="custom-control custom-radio col-6 col-md-4">
+<div class="custom-control custom-radio col-6 col-md-6">
   <input type="radio" id="customRadio4" name="Seller_Type" class="custom-control-input" value="1">
   <label class="custom-control-label" for="customRadio4">Individual</label>
 </div>
@@ -137,7 +136,7 @@
   <label class="custom-control-label" for="customRadio5">Manual</label>
 </div>
 
-<div class="custom-control custom-radio col-6 col-md-4">
+<div class="custom-control custom-radio col-6 col-md-6">
   <input type="radio" id="customRadio6" name="Transmission" class="custom-control-input" value="0">
   <label class="custom-control-label" for="customRadio6">Automatic</label>
 </div>
@@ -160,10 +159,12 @@
 </div>
 <br>
 <br>
-<div class="form-group col-md-3 mb-3">
-<div style="padding-left:200px;">
+<div class="form-group">
+<div class="row justify-content-center">
+  <div class="col-sm-4">
   <button type="submit" class="btn btn-success btn-lg">Submit</button>
   </div>
+</div>
 </div>
 </form>
 </div>
