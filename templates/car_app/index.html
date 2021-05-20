@@ -51,7 +51,11 @@
     <form action="{% url 'carpred_app:result' %}">
       {% csrf_token %}
       <div class="container text-center" style="padding-right: 300px">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
         <h3>Fill the car details</h3>
+      </div>
+      </div>
       </div>
       <br><br>
   <div class="form-row">
@@ -72,67 +76,95 @@
 
 <div style="padding-left: 150px">
 
-
-
-<label for="">Please select your Fuel Type:</label>
-  <div class="form-row" >
-
-  <div class="custom-control custom-radio col-sm-2 mb-2">
+<div class="form-group">
+  <label for="">Please select your Fuel Type:</label>
+<div class="form-row" >
+<div class="form-group ">
+  <div class="custom-control custom-radio col-6 col-md-4">
   <input type="radio" id="customRadio1" name="Fuel" class="custom-control-input" value="0">
   <label class="custom-control-label" for="customRadio1">Petrol</label>
 </div>
-<div class="custom-control custom-radio col-sm-2 mb-2">
+
+
+
+<div class="custom-control custom-radio col-6 col-md-4">
   <input type="radio" id="customRadio2" name="Fuel" class="custom-control-input" value="1">
   <label class="custom-control-label" for="customRadio2">Diesel</label>
 </div>
-<div class="custom-control custom-radio col-sm-2 mb-2">
+
+
+<div class="custom-control custom-radio col-6 col-md-4">
   <input type="radio" id="cng" name="Fuel" class="custom-control-input" value="2">
   <label class="custom-control-label" for="cng">CNG</label>
 </div>
 </div>
+</div>
+</div>
+
 <br>
-<label for="">Please select your Seller Type:</label>
-  <div class="form-row">
-  <div class="custom-control custom-radio col-sm-2 mb-2">
+
+<div class="form-group">
+  <label for="">Please select your Seller Type:</label>
+
+<div class="form-row">
+<div class="form-group">
+
+  <div class="custom-control custom-radio col-6 col-md-4">
   <input type="radio" id="customRadio3" name="Seller_Type" class="custom-control-input" value="0">
   <label class="custom-control-label" for="customRadio3">Dealer</label>
 </div>
-<div class="custom-control custom-radio col-sm-2 mb-2">
+
+
+
+<div class="custom-control custom-radio col-6 col-md-4">
   <input type="radio" id="customRadio4" name="Seller_Type" class="custom-control-input" value="1">
   <label class="custom-control-label" for="customRadio4">Individual</label>
 </div>
+
 </div>
-
-
-
+</div>
+</div>
 <br>
-<label for="">Please select your Transmission Type</label>
-  <div class="form-row">
-  <div class="custom-control custom-radio col-sm-2 mb-2">
+
+<div class="form-group">
+  <label for="">Please select your Transmission Type</label>
+
+<div class="form-row">
+
+<div class="form-group">
+  <div class="custom-control custom-radio col-6 col-md-4 ">
   <input type="radio" id="customRadio5" name="Transmission" class="custom-control-input" value="1">
   <label class="custom-control-label" for="customRadio5">Manual</label>
 </div>
-<div class="custom-control custom-radio col-sm-2 mb-2">
+
+<div class="custom-control custom-radio col-6 col-md-4">
   <input type="radio" id="customRadio6" name="Transmission" class="custom-control-input" value="0">
   <label class="custom-control-label" for="customRadio6">Automatic</label>
 </div>
-</div> <br>
+
+</div>
+</div>
+</div>
+ <br>
 
 
+<div class="form-group">
 <label for="">Please select Owner Type:</label>
-<select class="custom-select col-sm-3" name="Owner">
+<select class="form-control col-6" name="Owner">
   <option selected>Please select Owner Type</option>
   <option value="0">First Owner</option>
   <option value="1">Second Owner</option>
   <option value="2">Third Owner</option>
 </select>
 </div>
+</div>
 <br>
 <br>
-
+<div class="form-group col-md-3 mb-3">
 <div style="padding-left:200px;">
   <button type="submit" class="btn btn-success btn-lg">Submit</button>
   </div>
+</div>
 </form>
 </div>
 
